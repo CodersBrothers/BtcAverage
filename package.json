@@ -11,7 +11,12 @@
     "average",
     "bitcoin",
     "btc",
-    "price"
+    "price",
+    "btce",
+    "coindesk",
+    "coinbase",
+    "bitstamp",
+    "blockchain"
   ],
   "repository": {
     "type": "git",

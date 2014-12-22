@@ -22,6 +22,7 @@ btcaverage()
     });
 ```
 
+Returns:
 ```
 ---- By provider ----
 Btc-e: $328
