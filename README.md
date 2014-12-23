@@ -25,7 +25,7 @@ $ npm i --save btcaverage
 ## Usage
 
 ```js
-var btcaverage = require('./btcaverage');
+var btcaverage = require('btcaverage');
 btcaverage()
     .then(function(priceDetails){
         console.log('---- By provider ----');
