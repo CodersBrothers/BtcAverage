@@ -1,5 +1,5 @@
 # Bitcoin price average
-This library uses multiple providers of price for calculate average price in $ (USD), but with one important feature: If some service is broken the average not will be broken. Use a math concept: Variance. This use prices calculating variance and discarding the farthest values. This library is resistant for errors in providers.
+This library uses multiple providers of price for calculate price average in $ (USD), but with one important feature: If some service is broken the average not will be broken. Use a math concept: Variance. BtcAverage uses providers prices calculating variance and discarding the farthest values. This library is resistant for errors of the providers.
 
 ## Providers
 - Btc-e
