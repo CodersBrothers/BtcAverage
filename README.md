@@ -14,6 +14,7 @@ This library uses multiple providers of price for calculate average price in $ (
 - CoinTrader
 - LoyalBit
 - Bitex.la
+- RockTrading
 
 ## Install
 
@@ -39,20 +40,21 @@ btcaverage()
 Returns:
 ```
 ---- By provider ----
-Btc-e: $327.61
-CoinDesk: $330.585
-CoinBase: $331.84
-BitStamp: $331.83
-BlockChain: $331.86
-OKCoin: $331.36
-Bitfinex: $331.71
-LakeBTC: $333.07
-HitBTC: $333.36
-CoinTrader: $335.09
-LoyalBit: $331.89
-Bitex.la: $332.49498998
+Btc-e: $328.04
+CoinDesk: $331.15
+CoinBase: $331.93
+BitStamp: $331.9
+BlockChain: $330.45
+OKCoin: $332.25
+Bitfinex: $331.96
+LakeBTC: $334.02
+HitBTC: $334.09
+CoinTrader: $335.3
+LoyalBit: $331.9
+Bitex.la: $332.54509018
+RockTrading: $329.93
 ---- Average ----
-$331.89
+$332.29 calculated from 12 prices (Removing farthest|problematic values)
 ```
 
 

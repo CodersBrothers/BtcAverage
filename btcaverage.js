@@ -66,6 +66,7 @@ function getPrice(){
             });
             df.resolve({
                 average: infoAverage.average,
+                pricesAverage: infoAverage.dataset,
                 prices: pricesProviders
             });
         });

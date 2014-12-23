@@ -58,5 +58,10 @@
     "name": "Bitex.la",
     "url": "https://bitex.la/api-v1/rest/btc/market/ticker",
     "path": "ask"
+  },
+  {
+    "name": "RockTrading",
+    "url": "https://www.therocktrading.com/api/tickers/",
+    "path": "result.tickers.BTCUSD.ask"
   }
 ]
