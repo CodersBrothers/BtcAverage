@@ -1,5 +1,19 @@
 # Bitcoin price average
-This library uses multiple providers of price for calculate average price but with one important feature: If some service is broken the average not will be broken. Use a math concept: Variance. This use prices calculating variance and discarding the farthest values.
+This library uses multiple providers of price for calculate average price in $ (USD), but with one important feature: If some service is broken the average not will be broken. Use a math concept: Variance. This use prices calculating variance and discarding the farthest values. This library is resistant for errors in providers.
+
+## Providers
+- Btc-e
+- CoinDesk
+- CoinBase
+- BitStamp
+- BlockChain
+- OKCoin
+- Bitfinex
+- LakeBTC
+- HitBTC
+- CoinTrader
+- LoyalBit
+- Bitex.la
 
 ## Install
 
@@ -25,13 +39,20 @@ btcaverage()
 Returns:
 ```
 ---- By provider ----
-Btc-e: $328
-CoinDesk: $329.783
-CoinBase: $331.02
-BitStamp: $331.44
-BlockChain: $331.02
+Btc-e: $327.61
+CoinDesk: $330.585
+CoinBase: $331.84
+BitStamp: $331.83
+BlockChain: $331.86
+OKCoin: $331.36
+Bitfinex: $331.71
+LakeBTC: $333.07
+HitBTC: $333.36
+CoinTrader: $335.09
+LoyalBit: $331.89
+Bitex.la: $332.49498998
 ---- Average ----
-$330.25
+$331.89
 ```
 
 

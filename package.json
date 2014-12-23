@@ -1,7 +1,7 @@
 {
   "name": "btcaverage",
   "description": "Get Bitcoin price average from multiple providers. If some service is broken the average not will be broken.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "CodersBrothers",
   "homepage": "https://github.com/CodersBrothers/btcaverage",
   "bugs": {
@@ -16,7 +16,14 @@
     "coindesk",
     "coinbase",
     "bitstamp",
-    "blockchain"
+    "blockchain",
+    "okcoin",
+    "Bitfinex",
+    "LakeBTC",
+    "HitBTC",
+    "CoinTrader",
+    "LoyalBit",
+    "Bitex.la"
   ],
   "repository": {
     "type": "git",

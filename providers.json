@@ -11,7 +11,7 @@
   },
   {
     "name": "CoinBase",
-    "url": "https://coinbase.com/api/v1/prices/sell",
+    "url": "https://coinbase.com/api/v1/prices/buy",
     "path": "subtotal.amount"
   },
   {
@@ -23,5 +23,40 @@
     "name": "BlockChain",
     "url": "https://blockchain.info/es/ticker",
     "path": "USD.buy"
+  },
+  {
+    "name": "OKCoin",
+    "url": "https://www.okcoin.com/api/v1/ticker.do?symbol=btc_usd",
+    "path": "ticker.buy"
+  },
+  {
+    "name": "Bitfinex",
+    "url": "https://api.bitfinex.com/v1/pubticker/btcusd",
+    "path": "ask"
+  },
+  {
+    "name": "LakeBTC",
+    "url": "https://www.lakebtc.com/api_v1/ticker",
+    "path": "USD.ask"
+  },
+  {
+    "name": "HitBTC",
+    "url": "https://api.hitbtc.com/api/1/public/BTCUSD/ticker",
+    "path": "ask"
+  },
+  {
+    "name": "CoinTrader",
+    "url": "https://www.cointrader.net/api3/stats/daily",
+    "path": "data.BTCUSD.offer"
+  },
+  {
+    "name": "LoyalBit",
+    "url": "https://www.loyalbit.com/api/ticker",
+    "path": "ask"
+  },
+  {
+    "name": "Bitex.la",
+    "url": "https://bitex.la/api-v1/rest/btc/market/ticker",
+    "path": "ask"
   }
 ]
