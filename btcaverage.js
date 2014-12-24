@@ -9,60 +9,55 @@ var ACCEPTABLE_VARIANCE = 3;
 var MINIMUM_VALUES_VARIANCE = 3;
 
 /**
+ * FIND VALUE BY PATH
+ *
+ * @param {Object} jsonData
+ * @param {String} path
+ */
+function findValueByPath(jsonData, path){
+    var errorParts = false;
+    path.split('.').forEach(function(part){
+        if(!errorParts){
+            jsonData = jsonData[part];
+            if(!jsonData) errorParts = true;
+        }
+    });
+    return errorParts ? 0 : parseFloat(jsonData);
+}
+
+/**
  * GET PRICE FROM API SERVICE
  *
  * @param {String} urlAPI
- * @param {String} objectPath
  * @param {Function} callback
  */
-function requestPrice(urlAPI, objectPath, callback){
+function requestPrice(urlAPI, callback){
     request({
         method: 'GET',
         url: urlAPI,
         timeout: TIMEOUT
     }, function(error, res, body){
-
-        if(error){
-            callback(0);
-            return;
+        if(!error){
+            try{
+                var current = JSON.parse(body);
+                callback(current);
+            }catch(e){}
         }
-
-        try{
-
-            var current = JSON.parse(body);
-            var partsObject = objectPath.split('.');
-            var errorParts = false;
-            partsObject.forEach(function(part){
-                if(!errorParts){
-                    current = current[part];
-                    if(!current){
-                        errorParts = true;
-                    }
-                }
-            });
-
-            if(errorParts){
-                callback(0);
-            }else{
-                callback(parseFloat(current));
-            }
-
-        }catch(err){
-            callback(0);
+        if(!current) {
+            callback({});
         }
-
     });
 }
 
 /**
  * GET PRICE
  */
-function getPrice(){
+module.exports = function getPrice(){
     var df = Q.defer();
     async.parallel(providers.map(function(provider){
             return function(callback){
-                requestPrice(provider.url, provider.path, function(price){
-                    callback(null, price);
+                requestPrice(provider.url, function(jsonResponse){
+                    callback(null, findValueByPath(jsonResponse, provider.path));
                 });
             }
         }),
@@ -79,5 +74,4 @@ function getPrice(){
             });
         });
     return df.promise;
-}
-module.exports = getPrice;
+};
