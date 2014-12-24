@@ -4,6 +4,10 @@ var async = require('async');
 var smartaverage = require('smartaverage');
 var providers = require('./providers');
 
+var TIMEOUT = 5000;
+var ACCEPTABLE_VARIANCE = 3;
+var MINIMUM_VALUES_VARIANCE = 3;
+
 /**
  * GET PRICE FROM API SERVICE
  *
@@ -12,7 +16,11 @@ var providers = require('./providers');
  * @param {Function} callback
  */
 function requestPrice(urlAPI, objectPath, callback){
-    request.get(urlAPI, function(error, res, body){
+    request({
+        method: 'GET',
+        url: urlAPI,
+        timeout: TIMEOUT
+    }, function(error, res, body){
 
         if(error){
             callback(0);
@@ -59,7 +67,7 @@ function getPrice(){
             }
         }),
         function(err, prices){
-            var infoAverage = smartaverage(3, 3, prices);
+            var infoAverage = smartaverage(ACCEPTABLE_VARIANCE, MINIMUM_VALUES_VARIANCE, prices);
             var pricesProviders = {};
             prices.forEach(function(price, i){
                 pricesProviders[providers[i].name] = price;
