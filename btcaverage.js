@@ -63,15 +63,19 @@ module.exports = function getPrice(){
         }),
         function(err, prices){
             var infoAverage = smartaverage(ACCEPTABLE_VARIANCE, MINIMUM_VALUES_VARIANCE, prices);
-            var pricesProviders = {};
-            prices.forEach(function(price, i){
-                pricesProviders[providers[i].name] = price;
-            });
-            df.resolve({
-                average: infoAverage.average,
-                pricesAverage: infoAverage.dataset,
-                prices: pricesProviders
-            });
+            if(infoAverage){
+                var pricesProviders = {};
+                prices.forEach(function(price, i){
+                    pricesProviders[providers[i].name] = price;
+                });
+                df.resolve({
+                    average: infoAverage.average,
+                    pricesAverage: infoAverage.dataset,
+                    prices: pricesProviders
+                });
+            }else{
+                df.reject(new Error('Was imposible get price average'));
+            }
         });
     return df.promise;
 };
