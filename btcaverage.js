@@ -35,7 +35,8 @@ function requestPrice(urlAPI, callback){
     request({
         method: 'GET',
         url: urlAPI,
-        timeout: TIMEOUT
+        timeout: TIMEOUT,
+        maxRedirects: 2
     }, function(error, res, body){
         if(!error){
             try{
