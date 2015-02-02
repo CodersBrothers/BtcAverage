@@ -35,11 +35,6 @@
     "path": "ask"
   },
   {
-    "name": "LakeBTC",
-    "url": "https://www.lakebtc.com/api_v1/ticker",
-    "path": "USD.ask"
-  },
-  {
     "name": "HitBTC",
     "url": "https://api.hitbtc.com/api/1/public/BTCUSD/ticker",
     "path": "ask"
