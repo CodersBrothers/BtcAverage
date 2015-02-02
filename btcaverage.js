@@ -4,7 +4,7 @@ var async = require('async');
 var smartaverage = require('smartaverage');
 var providers = require('./providers');
 
-var TIMEOUT = 5000;
+var TIMEOUT = 20000;
 var ACCEPTABLE_VARIANCE = 3;
 var MINIMUM_VALUES_VARIANCE = 3;
 
