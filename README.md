@@ -1,6 +1,15 @@
 # Bitcoin price average
 This library uses multiple providers of price for calculate price average in $ (USD), but with one important feature: If some service is broken the average not will be broken. Use a math concept: Variance. BtcAverage uses providers prices calculating variance and discarding the farthest values. This library is resistant for errors of the providers.
 
+## Install
+
+```sh
+$ npm i --save btcaverage
+```
+
+## Version
+0.0.8
+
 ## Providers
 - Btc-e
 - CoinDesk
@@ -9,18 +18,11 @@ This library uses multiple providers of price for calculate price average in $ (
 - BlockChain
 - OKCoin
 - Bitfinex
-- LakeBTC
 - HitBTC
 - CoinTrader
 - LoyalBit
 - Bitex.la
 - RockTrading
-
-## Install
-
-```sh
-$ npm i --save btcaverage
-```
 
 ## Usage
 
@@ -47,7 +49,6 @@ BitStamp: $331.9
 BlockChain: $330.45
 OKCoin: $332.25
 Bitfinex: $331.96
-LakeBTC: $334.02
 HitBTC: $334.09
 CoinTrader: $335.3
 LoyalBit: $331.9
