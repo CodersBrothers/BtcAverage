@@ -23,6 +23,7 @@ $ npm i --save btcaverage
 - LoyalBit
 - Bitex.la
 - RockTrading
+- Bitpay
 
 ## Usage
 
