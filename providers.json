@@ -63,5 +63,12 @@
     "name": "Bitpay",
     "url": "https://bitpay.com/api/rates/USD",
     "path": "rate"
+  },
+  {
+    "name": "Unocoin",
+    "url": "https://www.unocoin.com/trade?all",
+    "path": "buy",
+    "currency": "INR"
   }
+
 ]

@@ -32,6 +32,9 @@
   },
   "dependencies": {
     "async": "^0.9.0",
+    "bluebird": "^3.0.6",
+    "get-exchange-rates": "^1.0.0",
+    "get-exchange-rates-usd": "^1.0.0",
     "q": "^1.1.2",
     "request": "^2.51.0",
     "smartaverage": "0.0.2"
