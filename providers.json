@@ -69,6 +69,15 @@
     "url": "https://www.unocoin.com/trade?all",
     "path": "buy",
     "currency": "INR"
+  },
+  {
+    "name": "itbit",
+    "url": "https://api.itbit.com/v1/markets/XBTUSD/ticker",
+    "path": "ask"
+  },
+  {
+    "name": "bitfinex",
+    "url": "https://api.bitfinex.com/v1/pubticker/BTCUSD",
+    "path": "ask"
   }
-
 ]
